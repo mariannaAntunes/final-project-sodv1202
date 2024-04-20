@@ -8,8 +8,25 @@
         _turn = 0;
     }
 
-    public abstract void playerType();
+    public abstract int columnChoosen();
+}
+
+class HumanPlayer : Player
+{
+    public override int columnChoosen()
+    {
+        int columnNum;
+        Console.WriteLine("Enter column number: ");
+        columnNum = int.Parse(Console.ReadLine());
+        return columnNum;
+    }
 }
 
 
-
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+    }
+}
