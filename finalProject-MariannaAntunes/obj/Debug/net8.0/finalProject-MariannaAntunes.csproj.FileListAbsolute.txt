@@ -1,0 +1,15 @@
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\bin\Debug\net8.0\finalProject-MariannaAntunes.exe
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\bin\Debug\net8.0\finalProject-MariannaAntunes.deps.json
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\bin\Debug\net8.0\finalProject-MariannaAntunes.runtimeconfig.json
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\bin\Debug\net8.0\finalProject-MariannaAntunes.dll
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\bin\Debug\net8.0\finalProject-MariannaAntunes.pdb
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.AssemblyInfoInputs.cache
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.AssemblyInfo.cs
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.csproj.CoreCompileInputs.cache
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.sourcelink.json
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.dll
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\refint\finalProject-MariannaAntunes.dll
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.pdb
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\finalProject-MariannaAntunes.genruntimeconfig.cache
+C:\Users\mrang\Desktop\SODV1202\Final Project\finalProject-MariannaAntunes\finalProject-MariannaAntunes\obj\Debug\net8.0\ref\finalProject-MariannaAntunes.dll
