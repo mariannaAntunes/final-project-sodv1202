@@ -86,14 +86,25 @@ public static class Model
 
 class Controller
 {
-    private static bool CheckWinner()
+    private static bool CheckWinner() //This method checks if there is a connected 4 completed (horizontal, vertical or diagonally)
     {
         return false; //To Do
     }
 
-    private static bool CheckGameOver()
+    private static bool CheckGameOver() //This method checks if the board is already completed (return false) or not (return true)
     {
-        return false; //To Do
+        for (int i = 0; i < Model._board.GetLength(0); i++)
+        {
+            for (int j = 0; j < Model._board.GetLength(1); j++)
+            {
+                if(Model._board[i, j] == '#')
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
 
