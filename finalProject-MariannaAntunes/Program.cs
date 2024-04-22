@@ -63,7 +63,7 @@ public static class Model
             {
                 _board[i, j] = '#';
             }
-        } 
+        }
     }
 
     public static void DisplayBoard()
@@ -88,7 +88,20 @@ class Controller
 {
     private static bool CheckWinner() //This method checks if there is a connected 4 completed (horizontal, vertical or diagonally)
     {
-        return false; //To Do
+        //Horizontal check
+        for (int i = 0; i < Model._board.GetLength(0); i++)
+        {
+            for (int j = 0; j < Model._board.GetLength(1)-3; j++)
+            {
+                if(Model._board[i, j] == Model._playersList[Model._turn].Symbol && Model._board[i, j+1] == Model._playersList[Model._turn].Symbol && Model._board[i, j + 2] == Model._playersList[Model._turn].Symbol && Model._board[i, j + 3] == Model._playersList[Model._turn].Symbol)
+                {
+                    Console.WriteLine($"It is a Connect 4. {Model._playersList[Model._turn].Name} wins!");
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private static bool CheckGameOver() //This method checks if the board is already completed (return false) or not (return true)
