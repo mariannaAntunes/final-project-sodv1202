@@ -101,6 +101,19 @@ class Controller
             }
         }
 
+        //Vertical check
+        for (int i = 0; i < Model._board.GetLength(0) - 3; i++)
+        {
+            for (int j = 0; j < Model._board.GetLength(1); j++)
+            {
+                if (Model._board[i, j] == Model._playersList[Model._turn].Symbol && Model._board[i + 1, j] == Model._playersList[Model._turn].Symbol && Model._board[i + 2, j] == Model._playersList[Model._turn].Symbol && Model._board[i + 3, j] == Model._playersList[Model._turn].Symbol)
+                {
+                    Console.WriteLine($"It is a Connect 4. {Model._playersList[Model._turn].Name} wins!");
+                    return true;
+                }
+            }
+        }
+
         return false;
     }
 
