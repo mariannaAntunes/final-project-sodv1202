@@ -46,11 +46,7 @@ public static class Model
     public static List<Player> _playersList;
     
     public static int _turn;
-    /*static Model()
-    {
-        _turn = 0;
-    }*/
-
+    
     public static char[,] _board = new char[6, 7];
 
     public static void StartGame()
@@ -159,6 +155,7 @@ class Controller
             }
         }
 
+        Console.WriteLine("Gameover!");
         return true;
     }
 
@@ -226,7 +223,23 @@ class Controller
                         {
                             if(CheckGameOver())
                             {
-                                return; //Ask if players want to play again
+                                //Ask if players want to play again
+                                Console.WriteLine("Restart? Yes(1) No (0):");
+                                restart = int.Parse(Console.ReadLine());
+                                if (restart == 1)
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("\x1b[3J"); //Clear the console fully and reset the cursor to the top
+
+                                    Console.WriteLine("Connect 4 Game");
+                                    Model.StartGame();
+                                    Model.DisplayBoard();
+                                    break;
+                                }
+                                else
+                                {
+                                    return;
+                                }
                             }
                             else
                             {
