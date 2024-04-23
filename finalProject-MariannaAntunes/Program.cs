@@ -68,6 +68,8 @@ public static class Model
 
     public static void DisplayBoard()
     {
+        Console.WriteLine();
+        Console.WriteLine("   Game Board    ");
         for (int i = 0; i < _board.GetLength(0); i++)
         {
             Console.Write("| ");
@@ -186,6 +188,7 @@ class Controller
         Model.DisplayBoard();
 
         int columnNum;
+        int restart;
 
         while (true)
         {
@@ -201,7 +204,23 @@ class Controller
                         Model.DisplayBoard();
                         if (CheckWinner())
                         {
-                            return; //Ask if players want to play again
+                            //Ask if players want to play again
+                            Console.WriteLine("Restart? Yes(1) No (0):");
+                            restart = int.Parse(Console.ReadLine());
+                            if(restart == 1)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("\x1b[3J"); //Clear the console fully and reset the cursor to the top
+
+                                Console.WriteLine("Connect 4 Game");
+                                Model.StartGame();
+                                Model.DisplayBoard();
+                                break;
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                         else
                         {
@@ -218,7 +237,8 @@ class Controller
                     }
                     else if(i==0)
                     {
-                        Console.WriteLine("Choose another column.");
+                        Console.WriteLine("Completed column. Choose another column number.");
+                        Console.WriteLine();
                     }
                 }
             }
