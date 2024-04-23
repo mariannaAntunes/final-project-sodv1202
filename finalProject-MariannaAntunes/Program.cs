@@ -41,6 +41,15 @@ class HumanPlayer : Player
     }
 }
 
+//Application Exception Class to handle column number outside the range of 1-7 
+class MyColumnNumberException : ApplicationException
+{
+    public MyColumnNumberException(string message) : base(message) 
+    {
+
+    }
+}
+
 public static class Model
 {
     public static List<Player> _playersList;
@@ -163,7 +172,6 @@ class Controller
     public static void Play()
     {
         string namePlayer1, namePlayer2;
-        //char symbolPlayer1='X', symbolPlayer2='O';
 
         Console.WriteLine("Connect 4 Game");
         Console.WriteLine();
@@ -191,7 +199,22 @@ class Controller
         {
             Console.WriteLine($"{Model._playersList[Model._turn].Name}, enter column number (1-7).");
             columnNum = int.Parse(Console.ReadLine());
-            if (columnNum >= 1 && columnNum <= 7)
+
+            //Application exception
+            if (columnNum < 1 || columnNum > 7)
+            {
+                try
+                {
+                    throw new MyColumnNumberException("Invalid column number!");
+                }
+                catch(MyColumnNumberException me)
+                {
+                    Console.WriteLine(me.Message);
+                    Console.WriteLine();
+                }
+            }
+
+            else 
             {
                 for (int i = Model._board.GetLength(0)-1; i >=0 ; i--)
                 {
@@ -255,10 +278,7 @@ class Controller
                     }
                 }
             }
-            else //May be an exception
-            {
-                Console.WriteLine("Invalid column number!");
-            }
+            
         }
     }
 }
