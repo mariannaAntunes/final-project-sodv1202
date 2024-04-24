@@ -93,10 +93,18 @@ public static class Model
     }
 }
 
-//class Controller will play the game 
-class Controller
+//interface IGame defines methods related to a game to be completed in the class that implements it
+public interface IGame
 {
-    private static bool CheckWinner() //This method checks if there is a connected 4 completed (horizontal, vertical or diagonally)
+    bool CheckWinner();
+    bool CheckGameOver();
+    void Play();
+}
+
+//class Controller will play the game 
+class Controller : IGame //class Controller implements interface IGame
+{
+    public bool CheckWinner() //This method checks if there is a connected 4 completed (horizontal, vertical or diagonally)
     {
         //Horizontal check
         for (int i = 0; i < Model._board.GetLength(0); i++)
@@ -153,7 +161,7 @@ class Controller
         return false;
     }
 
-    private static bool CheckGameOver() //This method checks if the board is already completed (return false) or not (return true)
+    public bool CheckGameOver() //This method checks if the board is already completed (return false) or not (return true)
     {
         for (int i = 0; i < Model._board.GetLength(0); i++)
         {
@@ -171,7 +179,7 @@ class Controller
     }
 
 
-    public static void Play()
+    public void Play()
     {
         string namePlayer1, namePlayer2;
 
@@ -294,6 +302,7 @@ class Program
 {
     static void Main(string[] args)
     {       
-        Controller.Play();
+        Controller controller = new Controller();
+        controller.Play();
     }
 }
